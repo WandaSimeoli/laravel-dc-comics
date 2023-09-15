@@ -1,9 +1,9 @@
 @extends('layouts.mainpage')
 
-@section('page-title', 'Comics-Index')
+@section('page-title', $comic->title)
 
 @section('main')
-<h1> Comics Index</h1>
+<h1> {{ $comic->title}}</h1>
 <div class="container-sm">
 <table class="table">
     <thead>
@@ -20,7 +20,6 @@
     </thead>
     <tbody>
         <tr>
-        @foreach ($comics as $comic)
         <td>{{ $comic->title}}</td>
         <td> {{ $comic->description}}</td>
         <td> $ {{ $comic->price}}</td>
@@ -31,7 +30,6 @@
         <td> {{$comic->writers}}</td>
         <td> <a href="{{ route('comics.show',['comic'=>$comic->id])}}"  class="btn btn-info">Look</a> </td>
         </tr>
-        @endforeach
     </tbody>
     </table>
 </div>
