@@ -28,7 +28,6 @@
         <td>{{ $comic->type}}</td>
         <td> {{ $comic->artists}}</td>
         <td> {{$comic->writers}}</td>
-        <td> <a href="{{ route('comics.show',['comic'=>$comic->id])}}"  class="btn btn-info">Look</a> </td>
         </tr>
     </tbody>
     </table>
