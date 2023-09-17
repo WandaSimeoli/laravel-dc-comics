@@ -5,8 +5,9 @@
 @section('main')
 <div class="container-sm bg-warning">
 <h1> Modify Comic</h1>
-<form action="{{ route('comics.store')}}" method="POST">
+<form action="{{ route('comics.update', ['comic'=>$comic->id])}}" method="POST">
     @csrf
+    @method('PUT')
   <div class="mb-3">
     <label for="inputTitle" class="form-label">Title</label>
     <input type="text" class="form-control" id="inputTitle" name="title" placeholder="Enter value" value="{{$comic->title}}">
@@ -43,7 +44,7 @@
     <label for="inputWriter" class="form-label" >Writer</label>
     <input type="text" class="form-control" id="inputWriter" name="writers" placeholder="Enter value" value="{{$comic->writers}}">
   </div>
-  <button type="submit" class="btn btn-success">Add</button>
+  <button type="submit" class="btn btn-success">Update</button>
 </form>
 </div>
 
