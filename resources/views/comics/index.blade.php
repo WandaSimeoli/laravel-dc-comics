@@ -6,6 +6,7 @@
 <div class="container-sm">
 <h1> Comics Index</h1>
 <a href="{{route('comics.create')}}" class="btn btn-primary mb-2">Add</a>
+
 <table class="table">
     <thead>
         <tr>
@@ -34,6 +35,7 @@
         <td> {{ $comic->artists}}</td>
         <td> {{$comic->writers}}</td>
         <td> <a href="{{ route('comics.show',['comic'=>$comic->id])}}"  class="btn btn-info">Look</a> </td>
+        <td> <a href="{{ route('comics.edit',['comic'=>$comic->id])}}"  class="btn btn-warning">Modify</a> </td>
         </tr>
         @endforeach
     </tbody>
