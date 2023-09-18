@@ -18,11 +18,11 @@
 </div>
   <div class="mb-3">
     <label for="inputDescription" class="form-label" >Description</label>
-    <input type="text" class="form-control" id="inputDescription" name="description" placeholder="Enter value" value="{{$comic->description}}">
+    <textarea class="form-control" placeholder="Enter description" id="inputDescription" style="height: 100px" name="description" value="{{$comic->description}}"></textarea>
   </div>
   <div class="mb-3">
     <label for="inputPrice" class="form-label" >Price</label>
-    <input type="text" class="form-control" id="inputPrice" name="price" placeholder="Enter value" value="{{$comic->price}}">
+    <input type="number" class="form-control" id="inputPrice" name="price" placeholder="Enter value" value="{{$comic->price}}">
   </div>
   <div class="mb-3">
     <label for="inputSeries" class="form-label" >Series</label>

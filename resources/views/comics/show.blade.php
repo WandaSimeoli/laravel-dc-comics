@@ -14,8 +14,8 @@
         <th scope="col">Series</th>
         <th scope="col">Date</th>
         <th scope="col">Type</th>
-        <th scope="col">Artist</th>
-        <th scope="col">Writer</th>
+        <th scope="col">Artists</th>
+        <th scope="col">Writers</th>
         </tr>
     </thead>
     <tbody>
