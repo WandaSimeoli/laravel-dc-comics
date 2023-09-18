@@ -29,7 +29,7 @@
   <div class="mb-3">
     <label for="inputDescription" class="form-label" >Description</label>
     <textarea class="form-control @error('description') is-invalid @enderror" placeholder="Enter description" id="inputDescription" style="height: 100px" 
-    name="description" value="{{old('description')}}"></textarea>
+    name="description">{{old('description')}}</textarea>
   </div>
   @error('description')
       <div class="alert alert-danger">
@@ -78,24 +78,14 @@
       </div>
   <div class="mb-3">
     <label for="inputArtist" class="form-label" >Artist</label>
-    <input type="text" class="form-control @error('artists') is-invalid @enderror" id="inputArtist" name="artists" 
-    placeholder="Enter artists" value="{{old('artists')}}">
+    <input type="text" class="form-control" id="inputArtist" name="artists" 
+    placeholder="Enter artists">
   </div>
-  @error('artists')
-      <div class="alert alert-danger">
-        {{$message}}
-        @enderror
-      </div>
   <div class="mb-3">
     <label for="inputWriter" class="form-label" >Writer</label>
-    <input type="text" class="form-control @error('writers') is-invalid @enderror" id="inputWriter" name="writers" 
-    placeholder="Enter writers" value="{{old('writers')}}">
+    <input type="text" class="form-control" id="inputWriter" name="writers" 
+    placeholder="Enter writers">
   </div>
-  @error('writers')
-      <div class="alert alert-danger">
-        {{$message}}
-        @enderror
-      </div>
   <button type="submit" class="btn btn-success">Add</button>
 </form>
   
